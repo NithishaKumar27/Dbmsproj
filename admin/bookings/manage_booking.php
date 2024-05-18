@@ -46,7 +46,7 @@ if(isset($_GET['id'])){
         </div>
         <div class="row">
             <div class="col-md-6 form-group">
-                <label for="schedule" class="control-label"> Schedule</label>
+                <label for="schedule" class="control-label">Schedule</label>
                 <input type="date" id="schedule" name="schedule" value="<?= isset($schedule) ? $schedule : "" ?>" class="form-control form-control-sm form-control-border" required>
             </div>
             <div class="col-md-6 form-group">
