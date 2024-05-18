@@ -89,7 +89,7 @@ CREATE TABLE `hall_list` (
   `id` int(30) NOT NULL,
   `code` varchar(100) NOT NULL,
   `name` text NOT NULL,
-  <!-- `price` float NOT NULL DEFAULT 0,-->
+  
   `description` text NOT NULL,
   `image_path` text DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
