@@ -132,7 +132,7 @@ Class Users extends DBConnection {
 										 "msg"=>'Old Password is Incorrect'));
 			}
 		}
-		$chk = $this->conn->query("SELECT * FROM `client_list` where email ='{$email}' ".($id>0? " and id!= '{$id}' " : ""))->num_rows;
+		$chk = $this->conn->query("SELECT * FROM `student_list` where email ='{$email}' ".($id>0? " and id!= '{$id}' " : ""))->num_rows;
 		if($chk > 0){
 			return 3;
 			exit;
@@ -150,7 +150,7 @@ Class Users extends DBConnection {
 		}
 
 		if(empty($id)){
-			$qry = $this->conn->query("INSERT INTO client_list set {$data}");
+			$qry = $this->conn->query("INSERT INTO student_list set {$data}");
 			if($qry){
 				$id = $this->conn->insert_id;
 				$this->settings->set_flashdata('success','User Details successfully saved.');
@@ -161,7 +161,7 @@ Class Users extends DBConnection {
 			}
 
 		}else{
-			$qry = $this->conn->query("UPDATE client_list set $data where id = {$id}");
+			$qry = $this->conn->query("UPDATE student_list set $data where id = {$id}");
 			if($qry){
 				$this->settings->set_flashdata('success','User Details successfully updated.');
 				if($id == $this->settings->userdata('id')){
@@ -210,7 +210,7 @@ Class Users extends DBConnection {
 				}
 			}
 			if(isset($uploaded_img)){
-				$this->conn->query("UPDATE client_list set `avatar` = CONCAT('{$fname}','?v=',unix_timestamp(CURRENT_TIMESTAMP)) where id = '{$id}' ");
+				$this->conn->query("UPDATE student_list set `avatar` = CONCAT('{$fname}','?v=',unix_timestamp(CURRENT_TIMESTAMP)) where id = '{$id}' ");
 				if($id == $this->settings->userdata('id')){
 						$this->settings->set_userdata('avatar',$fname);
 				}
@@ -221,8 +221,8 @@ Class Users extends DBConnection {
 	}
 	public function delete_client(){
 		extract($_POST);
-		$avatar = $this->conn->query("SELECT avatar FROM client_list where id = '{$id}'")->fetch_array()['avatar'];
-		$qry = $this->conn->query("DELETE FROM client_list where id = $id");
+		$avatar = $this->conn->query("SELECT avatar FROM student_list where id = '{$id}'")->fetch_array()['avatar'];
+		$qry = $this->conn->query("DELETE FROM student_list where id = $id");
 		if($qry){
 			$avatar = explode("?",$avatar)[0];
 			$this->settings->set_flashdata('success','User Details successfully deleted.');
@@ -236,9 +236,9 @@ Class Users extends DBConnection {
 	}
 	public function verify_client(){
 		extract($_POST);
-		$update = $this->conn->query("UPDATE `client_list` set `status` = 1 where id = $id");
+		$update = $this->conn->query("UPDATE `student_list` set `status` = 1 where id = $id");
 		if($update){
-			$this->settings->set_flashdata('success','client Account has verified successfully.');
+			$this->settings->set_flashdata('success','Student Account has verified successfully.');
 			$resp['status'] = 'success';
 		}else{
 			$resp['status'] = 'failed';
