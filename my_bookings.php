@@ -33,7 +33,7 @@ if($_settings->userdata('login_type') == 1 || $_settings->userdata('id') <= 0){
                         </thead>
                         <tbody>
                             <?php 
-                            $bookings = $conn->query("SELECT b.*,h.name as hall FROM `booking_list` b inner join hall_list h on b.hall_id = h.id where b.client_id = '{$_settings->userdata('id')}' order by b.status asc, unix_timestamp(b.date_created) asc ");
+                            $bookings = $conn->query("SELECT b.*,h.name as hall FROM `booking_list` b inner join hall_list h on b.hall_id = h.id where b.student_id = '{$_settings->userdata('id')}' order by b.status asc, unix_timestamp(b.date_created) asc ");
                             while($row = $bookings->fetch_assoc()):
                             ?>
                             <tr>
