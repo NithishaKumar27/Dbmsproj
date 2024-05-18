@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `booking_list` (
   `id` int(30) NOT NULL,
   `code` varchar(100) NOT NULL,
-  `client_id` int(30) NOT NULL,
+  `student_id` int(30) NOT NULL,
   `hall_id` int(30) NOT NULL,
   `services_ids` text DEFAULT NULL,
-  `wedding_schedule` date NOT NULL,
-  `total_guests` float NOT NULL DEFAULT 0,
+  `schedule` date NOT NULL,
+  `total_students` float NOT NULL DEFAULT 0,
   `remarks` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
@@ -45,7 +45,7 @@ CREATE TABLE `booking_list` (
 -- Dumping data for table `booking_list`
 --
 
-INSERT INTO `booking_list` (`id`, `code`, `client_id`, `hall_id`, `services_ids`, `wedding_schedule`, `total_guests`, `remarks`, `status`, `date_created`, `date_updated`) VALUES
+INSERT INTO `booking_list` (`id`, `code`, `student_id`, `hall_id`, `services_ids`, `schedule`, `total_students`, `remarks`, `status`, `date_created`, `date_updated`) VALUES
 (1, '202201-00001', 2, 2, '|1|,|2|', '2022-02-23', 300, 'This a sample remarks only.', 1, '2022-01-31 14:24:38', '2022-01-31 15:25:54');
 
 -- --------------------------------------------------------
@@ -54,7 +54,7 @@ INSERT INTO `booking_list` (`id`, `code`, `client_id`, `hall_id`, `services_ids`
 -- Table structure for table `client_list`
 --
 
-CREATE TABLE `client_list` (
+CREATE TABLE `student_list` (
   `id` int(30) NOT NULL,
   `firstname` text NOT NULL,
   `middlename` text DEFAULT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `hall_list` (
   `id` int(30) NOT NULL,
   `code` varchar(100) NOT NULL,
   `name` text NOT NULL,
-  `price` float NOT NULL DEFAULT 0,
+  <!-- `price` float NOT NULL DEFAULT 0,-->
   `description` text NOT NULL,
   `image_path` text DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
@@ -102,9 +102,9 @@ CREATE TABLE `hall_list` (
 -- Dumping data for table `hall_list`
 --
 
-INSERT INTO `hall_list` (`id`, `code`, `name`, `price`, `description`, `image_path`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
-(1, 'Hall-101', 'Sample 101', 3500, 'Maecenas in efficitur magna. Donec cursus sollicitudin orci, at placerat turpis pulvinar id. Nullam scelerisque eleifend molestie. Duis id vulputate est. Phasellus efficitur non urna id pulvinar. Fusce iaculis massa ut risus ultrices rhoncus. Sed ultricies ligula eu cursus vestibulum. Curabitur efficitur nisi nisi, facilisis consequat lacus congue id.', 'uploads/halls/1.png?v=1643594690', 1, 0, '2022-01-31 09:59:18', '2022-01-31 10:04:50'),
-(2, 'Hall-102', 'Hall 2', 4500, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus mi felis, et euismod magna rutrum sollicitudin. Phasellus maximus accumsan neque ut rhoncus. Fusce sit amet lacus pellentesque, lacinia massa ac, feugiat massa. Sed dignissim mi et faucibus auctor. Sed vel vestibulum elit. Pellentesque id ligula erat. Proin dictum tempor rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dictum venenatis dui eu finibus.', NULL, 1, 0, '2022-01-31 10:10:16', NULL);
+INSERT INTO `hall_list` (`id`, `code`, `name`,  `description`, `image_path`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
+(1, 'Hall-101', 'Sample 101',  'Maecenas in efficitur magna. Donec cursus sollicitudin orci, at placerat turpis pulvinar id. Nullam scelerisque eleifend molestie. Duis id vulputate est. Phasellus efficitur non urna id pulvinar. Fusce iaculis massa ut risus ultrices rhoncus. Sed ultricies ligula eu cursus vestibulum. Curabitur efficitur nisi nisi, facilisis consequat lacus congue id.', 'uploads/halls/1.png?v=1643594690', 1, 0, '2022-01-31 09:59:18', '2022-01-31 10:04:50'),
+(2, 'Hall-102', 'Hall 2',  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus mi felis, et euismod magna rutrum sollicitudin. Phasellus maximus accumsan neque ut rhoncus. Fusce sit amet lacus pellentesque, lacinia massa ac, feugiat massa. Sed dignissim mi et faucibus auctor. Sed vel vestibulum elit. Pellentesque id ligula erat. Proin dictum tempor rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dictum venenatis dui eu finibus.', NULL, 1, 0, '2022-01-31 10:10:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -172,16 +172,16 @@ CREATE TABLE `system_info` (
 --
 
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
-(1, 'name', 'Wedding Hall Booking System'),
-(6, 'short_name', 'WHBS - PHP'),
+(1, 'name', 'Hall Booking System'),
+(6, 'short_name', 'HBS - PHP'),
 (11, 'logo', 'uploads/logo-1643592116.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
 (14, 'cover', 'uploads/cover-1643592116.png'),
 (15, 'content', 'Array'),
-(16, 'email', 'info@xyzweddinghalls.com'),
+(16, 'email', 'info@auhalls.com'),
 (17, 'contact', '09854698789 / 78945632'),
-(18, 'from_time', '11:00'),
-(19, 'to_time', '21:30'),
+(18, 'from_time', '8:00'),
+(19, 'to_time', '18:30'),
 (20, 'address', 'XYZ Street, There City, Here, 2306');
 
 -- --------------------------------------------------------
@@ -223,12 +223,12 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `p
 ALTER TABLE `booking_list`
   ADD PRIMARY KEY (`id`),
   ADD KEY `hall_id` (`hall_id`),
-  ADD KEY `client_id` (`client_id`);
+  ADD KEY `student_id` (`student_id`);
 
 --
--- Indexes for table `client_list`
+-- Indexes for table `student_list`
 --
-ALTER TABLE `client_list`
+ALTER TABLE `student_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -274,7 +274,7 @@ ALTER TABLE `booking_list`
 --
 -- AUTO_INCREMENT for table `client_list`
 --
-ALTER TABLE `client_list`
+ALTER TABLE `student_list`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -315,7 +315,7 @@ ALTER TABLE `users`
 -- Constraints for table `booking_list`
 --
 ALTER TABLE `booking_list`
-  ADD CONSTRAINT `booking_list_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `client_list` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `booking_list_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student_list` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `booking_list_ibfk_2` FOREIGN KEY (`hall_id`) REFERENCES `hall_list` (`id`) ON DELETE CASCADE;
 COMMIT;
 
