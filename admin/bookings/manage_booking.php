@@ -16,7 +16,7 @@ if(isset($_GET['id'])){
 <div class="container-fluid">
     <form action="" id="book-form">
         <input type="hidden" name="id" value="<?= isset($id) ? $id :'' ?>">
-        <input type="hidden" name="client_id" value="<?= isset($client_id) ? $client_id :'' ?>">
+        <input type="hidden" name="student_id" value="<?= isset($student_id) ? $student_id :'' ?>">
         <div class="row">
             <div class="col-md-12 form-group">
                 <label for="hall_id" class="control-label">Hall</label>
@@ -46,12 +46,12 @@ if(isset($_GET['id'])){
         </div>
         <div class="row">
             <div class="col-md-6 form-group">
-                <label for="wedding_schedule" class="control-label">Wedding Schedule</label>
-                <input type="date" id="wedding_schedule" name="wedding_schedule" value="<?= isset($wedding_schedule) ? $wedding_schedule : "" ?>" class="form-control form-control-sm form-control-border" required>
+                <label for="schedule" class="control-label"> Schedule</label>
+                <input type="date" id="schedule" name="schedule" value="<?= isset($schedule) ? $schedule : "" ?>" class="form-control form-control-sm form-control-border" required>
             </div>
             <div class="col-md-6 form-group">
-                <label for="total_guests" class="control-label">Total Guests</label>
-                <input type="number" id="total_guests" name="total_guests" value="<?= isset($total_guests) ? $total_guests : "" ?>" class="form-control form-control-sm form-control-border text-right" required>
+                <label for="total_students" class="control-label">Total Students</label>
+                <input type="number" id="total_students" name="total_students" value="<?= isset("total_students) ? "total_students : "" ?>" class="form-control form-control-sm form-control-border text-right" required>
             </div>
         </div>
         <div class="row">

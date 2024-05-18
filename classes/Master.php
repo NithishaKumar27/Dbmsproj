@@ -290,7 +290,7 @@ Class Master extends DBConnection {
 		}
 		return json_encode($resp);
 	}
-	/*function save_reservation(){
+  function save_reservation(){
 		$_POST['book'] = $_POST['date'] ." ".$_POST['time'];
 		extract($_POST);
 		$capacity = $this->conn->query("SELECT `".($seat_type == 1 ? "first_class_capacity" : "economy_capacity")."` FROM hall_list where id in (SELECT hall_id FROM `booking_list` where id ='{$book_id}') ")->fetch_array()[0];
@@ -371,13 +371,13 @@ Class Master extends DBConnection {
 		}
 		return json_encode($resp);
 	}
-}*/
+}
 
 $Master = new Master();
 $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
 $sysset = new SystemSettings();
 switch ($action) {
-	/*case 'save_reservation':
+	case 'save_reservation':
 		echo $Master->save_reservation();
 	break;
 	case 'delete_reservation':
@@ -385,7 +385,7 @@ switch ($action) {
 	break;
 	case 'update_reservation_status':
 		echo $Master->update_reservation_status();
-	break;*/
+	break;
 	case 'save_message':
 		echo $Master->save_message();
 	break;

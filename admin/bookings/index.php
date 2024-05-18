@@ -29,13 +29,13 @@
 				<tbody>
 					<?php 
 						$i = 1;
-						$qry = $conn->query("SELECT b.*,h.name as `hall`,concat(c.lastname,', ',c.firstname,' ', c.middlename) as fullname from `booking_list` b inner join `hall_list` h on b.hall_id = h.id inner join client_list c on b.client_id = c.id order by b.status asc, unix_timestamp(b.`date_created`) desc ");
+						$qry = $conn->query("SELECT b.*,h.name as `hall`,concat(c.lastname,', ',c.firstname,' ', c.middlename) as fullname from `booking_list` b inner join `hall_list` h on b.hall_id = h.id inner join student_list c on b.student_id = c.id order by b.status asc, unix_timestamp(b.`date_created`) desc ");
 						while($row = $qry->fetch_assoc()):
 					?>
 						<tr>
 							<td class="text-center"><?= $i++; ?></td>
 							<td><?php echo ($row['code']) ?></td>
-							<td class=""><?php echo date("Y-m-d",strtotime($row['wedding_schedule'])) ?></td>
+							<td class=""><?php echo date("Y-m-d",strtotime($row['schedule'])) ?></td>
 							<td class=""><?= $row['hall'] ?></td>
 							<td class=""><?= $row['fullname'] ?></td>
 							<td class="text-center">
