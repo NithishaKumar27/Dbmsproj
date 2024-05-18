@@ -72,10 +72,10 @@ CREATE TABLE `student_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `client_list`
+-- Dumping data for table `student_list`
 --
 
-INSERT INTO `client_list` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `contact`, `address`, `email`, `password`, `status`, `avatar`, `delete_flag`, `date_created`, `date_updated`) VALUES
+INSERT INTO `student_list` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `contact`, `address`, `email`, `password`, `status`, `avatar`, `delete_flag`, `date_created`, `date_updated`) VALUES
 (1, 'Claire', 'C', 'Blake', 'Female', '09123456789', 'This is my sample Address only.', 'cblake@sample.com', '4744ddea876b11dcb1d169fadf494418', 1, 'uploads/clients/1.png?v=1643609613', 0, '2022-01-31 13:33:27', '2022-01-31 14:13:33'),
 (2, 'John', 'D', 'Smith', 'Male', '09123456987', 'This my address.', 'jsmith@sample.com', '1254737c076cf867dc53d60a0364f38e', 1, '', 0, '2022-01-31 13:34:44', NULL);
 
