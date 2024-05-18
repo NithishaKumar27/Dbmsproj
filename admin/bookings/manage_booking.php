@@ -50,7 +50,7 @@ if(isset($_GET['id'])){
                 <input type="date" id="schedule" name="schedule" value="<?= isset($schedule) ? $schedule : "" ?>" class="form-control form-control-sm form-control-border" required>
             </div>
             <div class="col-md-6 form-group">
-                <label for="total_students" class="control-label">Total Students</label>
+                <label for="total_students" class="control-label">Total students</label>
                 <input type="number" id="total_students" name="total_students" value="<?= isset("total_students) ? "total_students : "" ?>" class="form-control form-control-sm form-control-border text-right" required>
             </div>
         </div>
