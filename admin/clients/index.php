@@ -15,7 +15,7 @@
 </style>
 <div class="card card-outline card-maroon">
 	<div class="card-header">
-		<h3 class="card-title">List of Clients</h3>
+		<h3 class="card-title">List of Students</h3>
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -43,7 +43,7 @@
 				<tbody>
 					<?php 
 						$i = 1;
-						$qry = $conn->query("SELECT *,concat(lastname,', ',firstname, ' ', middlename) as `name` from `client_list` order by concat(lastname,', ',firstname, ' ', middlename) asc ");
+						$qry = $conn->query("SELECT *,concat(lastname,', ',firstname, ' ', middlename) as `name` from `student_list` order by concat(lastname,', ',firstname, ' ', middlename) asc ");
 						while($row = $qry->fetch_assoc()):
 					?>
 						<tr>
@@ -88,10 +88,10 @@
 <script>
 	$(document).ready(function(){
 		$('.edit_data').click(function(){
-			uni_modal("Update Client Details","clients/manage_client.php?id="+$(this).attr('data-id'),'mid-large')
+			uni_modal("Update Student Details","clients/manage_client.php?id="+$(this).attr('data-id'),'mid-large')
 		})
 		$('.delete_data').click(function(){
-			_conf("Are you sure to delete this client permanently?","delete_client",[$(this).attr('data-id')])
+			_conf("Are you sure to delete this Student permanently?","delete_client",[$(this).attr('data-id')])
 		})
 		$('.table td,.table th').addClass('py-1 px-2 align-middle')
 		$('.table').dataTable();

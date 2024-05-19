@@ -2,7 +2,7 @@
 <?php 
 require_once('./../../config.php');
 if(isset($_GET['id']) && $_GET['id'] > 0){
-    $client = $conn->query("SELECT * FROM client_list where id ='{$_GET['id']}'");
+    $client = $conn->query("SELECT * FROM student_list where id ='{$_GET['id']}'");
     foreach($client->fetch_array() as $k =>$v){
         $$k = $v;
     }
