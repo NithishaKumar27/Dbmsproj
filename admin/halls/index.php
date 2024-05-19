@@ -31,7 +31,7 @@
 						<th>Date Created</th>
 						<th>Code</th>
 						<th>Name</th>
-						<th>Price</th>
+					<!--	<th>Price</th>-->
 						<th>Status</th>
 						<th>Action</th>
 					</tr>
@@ -47,7 +47,7 @@
 							<td class=""><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
 							<td class=""><?php echo $row['name'] ?></td>
 							<td class=""><p class="m-0 truncate-1"><?php echo $row['description'] ?></p></td>
-							<td class="text-right"><?= number_format($row['price'],2) ?></td>
+						<!--	<td class="text-right"><?= number_format($row['price'],2) ?></td>-->
 							<td class="text-center">
 								<?php 
 									switch($row['status']){
