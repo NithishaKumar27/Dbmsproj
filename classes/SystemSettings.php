@@ -92,8 +92,8 @@ class SystemSettings extends DBConnection{
 			if(!in_array($type,$allowed)){
 				$resp['msg'].=" But Image failed to upload due to invalid file type.";
 			}else{
-				$new_height = 720; 
-				$new_width = 1280; 
+				$new_height = 500; 
+				$new_width = 580; 
 		
 				list($width, $height) = getimagesize($upload);
 				$t_image = imagecreatetruecolor($new_width, $new_height);
