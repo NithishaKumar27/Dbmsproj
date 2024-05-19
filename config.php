@@ -23,7 +23,7 @@ function validate_image($file){
 		if(is_file(base_app.$file)){
 			return base_url.$file.$param;
 		}else{
-			return base_url.'https://swarajya.gumlet.io/swarajya/2018-04/54e921a1-9654-45e8-9c6b-6bc8c9ee0ac2/c491edc9_9d24_44a7_9fa6_a515dedbef98.jpg?w=640&q=75&auto=format,compress&format=webp';
+			return base_url.'dist/img/ceg4.jpg';
 		}
 	}else{
 		return base_url.'dist/img/no-image-available.png';
