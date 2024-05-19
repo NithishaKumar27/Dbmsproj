@@ -41,10 +41,10 @@ if(isset($_GET['id'])){
             <div class="col-8 text-dark border"><?= isset($hall) ? $hall : "N/A" ?></div>
             <div class="col-4 bg-gradient-maroon border">Services:</div>
             <div class="col-8 text-dark border"><?= isset($services) ? $services : "N/A" ?></div>
-            <div class="col-4 bg-gradient-maroon border">Wedding Schedule:</div>
-            <div class="col-8 text-dark border"><?= isset($wedding_schedule) ? date("M d, Y", strtotime($wedding_schedule)) : "N/A" ?></div>
-            <div class="col-4 bg-gradient-maroon border">Total Guests:</div>
-            <div class="col-8 text-dark border"><?= isset($total_guests) ? $total_guests : "N/A" ?></div>
+            <div class="col-4 bg-gradient-maroon border">Schedule:</div>
+            <div class="col-8 text-dark border"><?= isset($schedule) ? date("M d, Y", strtotime($schedule)) : "N/A" ?></div>
+            <div class="col-4 bg-gradient-maroon border">Total Students:</div>
+            <div class="col-8 text-dark border"><?= isset($total_students) ? $total_students : "N/A" ?></div>
             <div class="col-4 bg-gradient-maroon border">Status:</div>
             <div class="col-8 text-dark border">
                 <?php 

@@ -51,7 +51,7 @@
                       <a href="<?php echo base_url ?>admin/?page=clients" class="nav-link text-light nav-clients">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
-                          Client Lists
+                          Students Lists
                         </p>
                       </a>
                     </li>
