@@ -30,10 +30,10 @@ if(isset($_GET['id'])){
             <label for="name" class="control-label">Name</label>
             <input type="text" name="name" id="name" class="form-control form-control-border" placeholder="Enter hall Name" value ="<?php echo isset($name) ? $name : '' ?>" required>
         </div>
-        <div class="form-group">
+       <!-- <div class="form-group">
             <label for="price" class="control-label">Price</label>
             <input type="number" step="any" name="price" id="price" class="form-control form-control-border text-right" placeholder="0" value ="<?php echo isset($price) ? $price : "" ?>" required>
-        </div>
+        </div>-->
         <div class="form-group">
             <label for="description" class="control-label">Description</label>
             <textarea rows="3" name="description" id="description" class="form-control form-control-sm rounded-0" required><?php echo isset($description) ? $description : '' ?></textarea>
