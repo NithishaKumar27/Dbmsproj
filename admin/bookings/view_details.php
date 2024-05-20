@@ -31,9 +31,9 @@ if(isset($_GET['id'])){
         <div class="row">
             <div class="col-4 bg-gradient-maroon border">Reference Code:</div>
             <div class="col-8 text-dark border"><?= isset($code) ? $code : "N/A" ?></div>
-            <div class="col-4 bg-gradient-maroon border">Client Name:</div>
+            <div class="col-4 bg-gradient-maroon border">Student Name:</div>
             <div class="col-8 text-dark border"><?= isset($fullname) ? $fullname : "N/A" ?></div>
-            <div class="col-4 bg-gradient-maroon border">Contact #:</div>
+            <div class="col-4 bg-gradient-maroon border">Contact :</div>
             <div class="col-8 text-dark border"><?= isset($contact) ? $contact : "N/A" ?></div>
             <div class="col-4 bg-gradient-maroon border">Address:</div>
             <div class="col-8 text-dark border"><?= isset($address) ? $address : "N/A" ?></div>

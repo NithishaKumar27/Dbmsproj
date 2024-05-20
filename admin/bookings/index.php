@@ -21,7 +21,7 @@
 						<th>Ref. Code</th>
 						<th>Schedule</th>
 						<th>Hall</th>
-						<th>Client</th>
+						<th>Student</th>
 						<th>Status</th>
 						<th>Action</th>
 					</tr>
