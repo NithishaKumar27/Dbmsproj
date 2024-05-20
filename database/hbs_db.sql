@@ -179,17 +179,10 @@ INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
 (14, 'cover', 'uploads/cover-1643592116.png'),
 (15, 'content', 'Array'),
 (16, 'email', 'info@auhalls.com'),
-<<<<<<< HEAD
 (17, 'contact', '9854698789 / 9978945632'),
 (18, 'from_time', '8:00'),
 (19, 'to_time', '18:30'),
 (20, 'address', ' Sardar Patel Road, Guindy, Chennai, 600028');
-=======
-(17, 'contact', '9854698789 / 78945632'),
-(18, 'from_time', '8:00'),
-(19, 'to_time', '18:30'),
-(20, 'address', 'Sardar Patel Road, Guindy, Chennai, 600028');
->>>>>>> bf10b67786d9aeab37119ea765d026245e12679d
 
 -- --------------------------------------------------------
 
