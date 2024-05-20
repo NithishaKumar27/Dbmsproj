@@ -49,7 +49,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 				</div>
 				<div class="col-md-6">
 				<input type="text" name="contact" id="contact" class="form-control form-control-sm form-control-border" value="<?= isset($contact) ? $contact : "" ?>" required>
-				<small class="ml-3 text-maroon">Contact #</small>
+				<small class="ml-3 text-maroon">Contact </small>
 				</div>
 			</div>
 			<div class="row">
