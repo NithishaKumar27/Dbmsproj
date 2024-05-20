@@ -3,7 +3,7 @@ if($_settings->userdata('login_type') == 1){
     echo "<script> alert('You are not allowed to access this page.'); location.replace('./')</script>";
 }else{
     if($_settings->userdata('id') > 0){
-        $qry = $conn->query("SELECT *,concat(lastname,', ',firstname,' ',middlename) as fullname FROM `client_list` where id = '{$_settings->userdata('id')}'");
+        $qry = $conn->query("SELECT *,concat(lastname,', ',firstname,' ',middlename) as fullname FROM `student_list` where id = '{$_settings->userdata('id')}'");
         if($qry->num_rows > 0){
             $res = $qry->fetch_array();
             foreach($res as $k => $v){
