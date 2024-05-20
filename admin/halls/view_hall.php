@@ -29,8 +29,8 @@ if(isset($_GET['id'])){
         <dd class='pl-4 fs-4 fw-bold'><?= isset($code) ? $code : '' ?></dd>
         <dt class="text-muted">Hall</dt>
         <dd class='pl-4 fs-4 fw-bold'><?= isset($name) ? $name : '' ?></dd>
-        <dt class="text-muted">Price</dt>
-        <dd class='pl-4 fs-4 fw-bold'><?= isset($price) ? number_format($price,2) : '' ?></dd>
+       <!-- <dt class="text-muted">Price</dt>
+        <dd class='pl-4 fs-4 fw-bold'> '' ?></dd>-->
         <dt class="text-muted">Description</dt>
         <dd class='pl-4'>
             <p class=""><small><?= isset($description) ? ($description) : '' ?></small></p>
