@@ -200,11 +200,6 @@ INSERT INTO `service_list` (`id`, `name`, `description`, `status`, `delete_flag`
 (2, 'EVENTS', 'First preference is always given for exams,next for lectures and then for events.Incase of any important events,the decision of the admin will be final', 1, 0, '2022-01-31 10:22:31', NULL),
 (3, 'LECTURES', 'First preference is always given for exams,next for lectures and then for events.Incase of any important events,the decision of the admin will be final', 1, 0, '2022-01-31 10:22:31', NULL);
 
-----------------------------------------------------------
-
---
--- Table structure for table `system_info`
---
 
 CREATE TABLE `system_info` (
   `id` int(30) NOT NULL,
