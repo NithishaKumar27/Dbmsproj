@@ -143,7 +143,7 @@ INSERT INTO `hall_list` (`id`, `code`, `name`,  `description`, `image_path`, `st
 (38,'RB10', 'RB HALL - 10','TYPE: DRAWING HALL; LOCATION: GROUND FLOOR; PURPOSE: For drawing sessions, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
 (39,'RB13', 'RB HALL - 13','TYPE: DRAWING HALL; LOCATION: GROUND FLOOR; PURPOSE: For drawing sessions, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
 (40,'RB49', 'RB HALL - 49','TYPE: DRAWING HALL; LOCATION: FIRST FLOOR; PURPOSE: For drawing sessions, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
-(41,'RB32', 'RB HALL - 32','TYPE: DRAWING HALL; LOCATION: GROUND FLOOR; PURPOSE: For drawing sessions, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(41,'RB32', 'RB HALL - 32','TYPE: DRAWING HALL; LOCATION: GROUND FLOOR; PURPOSE: For drawing sessions, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL);
 
 
 
