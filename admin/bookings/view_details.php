@@ -1,7 +1,7 @@
 <?php
 require_once('./../../config.php');
 if(isset($_GET['id'])){
-    $qry = $conn->query("SELECT b.*,h.name as `hall`,concat(c.lastname,', ',c.firstname,' ', c.middlename) as fullname, c.contact, c.address from `booking_list` b inner join `hall_list` h on b.hall_id = h.id inner join client_list c on b.client_id = c.id where b.id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT b.*,h.name as `hall`,concat(c.lastname,', ',c.firstname,' ', c.middlename) as fullname, c.contact, c.address from `booking_list` b inner join `hall_list` h on b.hall_id = h.id inner join student_list c on b.student_id = c.id where b.id = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         $res = $qry->fetch_array();
         foreach($res as $k => $v){
