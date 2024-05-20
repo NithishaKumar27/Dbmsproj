@@ -107,7 +107,7 @@ CREATE TABLE `hall_list` (
 <!--(2, 'Hall-102', 'Hall 2',  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus mi felis, et euismod magna rutrum sollicitudin. Phasellus maximus accumsan neque ut rhoncus. Fusce sit amet lacus pellentesque, lacinia massa ac, feugiat massa. Sed dignissim mi et faucibus auctor. Sed vel vestibulum elit. Pellentesque id ligula erat. Proin dictum tempor rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dictum venenatis dui eu finibus.', NULL, 1, 0, '2022-01-31 10:10:16', NULL);-->
 
 INSERT INTO `hall_list` (`id`, `code`, `name`,  `description`, `image_path`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
-(1, 'KP101', 'KP HALL - 101','TYPE: DIGITAL CLASSROOM, LOCATION: GROUND FLOOR(KP), PURPOSE: For lectures, exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', '2024-05-20 10:04:50');
+(1, 'KP101', 'KP HALL 101','TYPE DIGITAL CLASSROOM LOCATION GROUND FLOOR kpPURPOSE For lectures exams and events',NULL, 1, 0, '2024-05-20 09:59:18', '2024-05-20 10:04:50');
 
 -- --------------------------------------------------------
 
