@@ -176,17 +176,17 @@ CREATE TABLE `system_info` (
 --
 
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
-(1, 'name', 'Hall Booking System'),
-(6, 'short_name', 'HBS - PHP'),
+(1, 'name', 'AU Hall Booking System'),
+(6, 'short_name', 'AU-HBS'),
 (11, 'logo', 'uploads/logo-1643592116.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
 (14, 'cover', 'uploads/cover-1643592116.png'),
 (15, 'content', 'Array'),
 (16, 'email', 'info@auhalls.com'),
-(17, 'contact', '09854698789 / 78945632'),
+(17, 'contact', '9854698789 / 9978945632'),
 (18, 'from_time', '8:00'),
 (19, 'to_time', '18:30'),
-(20, 'address', 'XYZ Street, There City, Here, 2306');
+(20, 'address', ' Sardar Patel Road, Guindy, Chennai, 600028');
 
 -- --------------------------------------------------------
 
