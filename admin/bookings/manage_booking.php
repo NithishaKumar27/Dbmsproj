@@ -51,7 +51,7 @@ if(isset($_GET['id'])){
             </div>
             <div class="col-md-6 form-group">
                 <label for="total_students" class="control-label">Total students</label>
-                <input type="number" id="total_students" name="total_students" value="<?= isset("total_students") ? "$total_students : "" ?>" class="form-control form-control-sm form-control-border text-right" required>
+                <input type="number" id="total_students" name="total_students" value="<?= isset("$total_students") ? $total_students : "" ?>" class="form-control form-control-sm form-control-border text-right" required>
             </div>
         </div>
         <div class="row">
