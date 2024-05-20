@@ -103,9 +103,24 @@ CREATE TABLE `hall_list` (
 --
 
 INSERT INTO `hall_list` (`id`, `code`, `name`,  `description`, `image_path`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
-(1, 'KP101', 'KP HALL 101','TYPE DIGITAL CLASSROOM LOCATION GROUND FLOOR kpPURPOSE For lectures exams and events',NULL, 1, 0, '2024-05-20 09:59:18', '2024-05-20 10:04:50');
+(1,'KP101', 'KP HALL - 101','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(2,'KP102', 'KP HALL - 102','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(3,'KP103', 'KP HALL - 103','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(4,'KP104', 'KP HALL - 104','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(5,'KP105D', 'KP HALL - 105','TYPE: DIGITAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(6,'KP106D', 'KP HALL - 106','TYPE: DIGITAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(7,'KP107D', 'KP HALL - 107','TYPE: DIGITAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(8,'KP108', 'KP HALL - 108','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL),
+(9,'KP109', 'KP HALL - 109','TYPE: NORMAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and events.',NULL, 1, 0, '2024-05-20 09:59:18', NULL);
 
--- --------------------------------------------------------
+
+
+
+
+
+
+
+-- -(1,'KP101', 'KP HALL - 101','TYPE: DIGITAL CLASSROOM; LOCATION: GROUND FLOOR; PURPOSE: For lectures exams and event-------------------------------------------------------
 
 --
 -- Table structure for table `message_list`
