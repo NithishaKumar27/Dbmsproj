@@ -258,8 +258,8 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `p
 --
  CREATE TABLE external_system (
    ` booking_id` INT PRIMARY KEY,
-   ` code` INT,
-   ` student_id `INT,
+   `code` INT,
+   `student_id`INT,
     `schedule` DATE,
    status VARCHAR(20)
 );    
