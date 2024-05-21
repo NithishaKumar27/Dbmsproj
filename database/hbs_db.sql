@@ -256,6 +256,13 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `p
 --
 -- Indexes for dumped tables
 --
+ CREATE TABLE external_system (
+   ` booking_id` INT PRIMARY KEY,
+   ` code` INT,
+   ` student_id `INT,
+    `schedule` DATE,
+   status VARCHAR(20)
+);    
 
 --
 -- Indexes for table `booking_list`
@@ -359,6 +366,4 @@ ALTER TABLE `booking_list`
   ADD CONSTRAINT `booking_list_ibfk_2` FOREIGN KEY (`hall_id`) REFERENCES `hall_list` (`id`) ON DELETE CASCADE;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
