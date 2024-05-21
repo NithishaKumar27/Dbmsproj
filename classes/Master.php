@@ -215,7 +215,7 @@ Class Master extends DBConnection {
 				if($check > 0){
 					$code = sprintf("%'.05d",ceil($code) + 1);
 				}else{
-					break;
+					break; 
 				}
 			}
 			$_POST['code'] = $prefix.$code;
