@@ -256,13 +256,7 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `p
 --
 -- Indexes for dumped tables
 --
- CREATE TABLE external_system (
-   ` booking_id` INT PRIMARY KEY,
-   `code` INT,
-   `student_id`INT,
-    `schedule` DATE,
-   status VARCHAR(20)
-);    
+ 
 
 --
 -- Indexes for table `booking_list`
@@ -364,44 +358,5 @@ ALTER TABLE `users`
 ALTER TABLE `booking_list`
   ADD CONSTRAINT `booking_list_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student_list` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `booking_list_ibfk_2` FOREIGN KEY (`hall_id`) REFERENCES `hall_list` (`id`) ON DELETE CASCADE;
-
-
-  --tri
-  --
-  DELIMITER //
-
--- Trigg to insert into external_system when a new booking is added
-CREATE TRIGGER after_booking_insert_sync
-AFTER INSERT ON booking_list
-FOR EACH ROW
-BEGIN
-    INSERT INTO external_system (booking_id, code, student_id, booking_date, status)
-    VALUES (NEW.id, NEW.code, NEW.student_id, NEW.schedule, NEW.status);
-END;
-//
-
--- Trigg to update external_system when a booking is updated
-CREATE TRIGGER after_booking_update_sync
-AFTER UPDATE ON booking_list
-FOR EACH ROW
-BEGIN
-    UPDATE external_system
-    SET code = NEW.code, student_id = NEW.student_id, booking_date = NEW.schedule, status = NEW.status
-    WHERE booking_id = NEW.id;
-END;
-//
-
--- Trigg to delete from external_system when a booking is deleted
-CREATE TRIGGER after_booking_delete_sync
-AFTER DELETE ON booking_list
-FOR EACH ROW
-BEGIN
-    DELETE FROM external_system WHERE booking_id = OLD.id;
-END;
-//
-
-DELIMITER ;
-
-COMMIT;
-
+commit;
 
