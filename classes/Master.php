@@ -248,7 +248,7 @@ Class Master extends DBConnection {
 				if(strpos($referer, 'admin/'))
 					$resp['msg'] = " Booking Details has successfully added.";
 				else
-					$resp['msg'] = " Your request has been successfully sent. The management will reach you as soon they sees your booking application. Here's your Booking Reference Code: <b>{$code}</b>.Incase of any high priority events,your booking might be cancelled.So please check your booking status frequently and try to rebook some other halls.Sorry for the inconvenience if any.";
+					$resp['msg'] = " Your request has been successfully sent. The management will reach you as soon they sees your booking application. Here's your Booking Reference Code: <b>{$code}</b>.<br> <b>ALERT:</b>Incase of any high priority events,your booking might be cancelled. So please check your booking status frequently and try to rebook some other halls . Sorry for the inconvenience if any.";
 			}else
 				$resp['msg'] = " Booking Details has been updated successfully.";
 		}else{
